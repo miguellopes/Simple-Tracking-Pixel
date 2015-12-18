@@ -1,0 +1,6 @@
+log_format track '$remote_addr [$time_iso8601] [$http_user_agent] $args'
+
+location /pixel.gif {
+   access_log /var/log/www/trackingpixel/acessos.log track;
+   empty_gif;
+}
